@@ -1,0 +1,5 @@
+<launch>
+<node pkg="dynamixel" type="demo0" name="Motion" />
+<node pkg="loadcell" type="read" name="getForceData" />
+<node pkg="cvtest" type="demo1" name="video" />
+</launch>

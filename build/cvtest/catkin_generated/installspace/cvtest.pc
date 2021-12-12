@@ -1,0 +1,8 @@
+prefix=/home/roma/roma-small-rover/install
+
+Name: cvtest
+Description: Description of cvtest
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

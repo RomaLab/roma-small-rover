@@ -79,7 +79,7 @@ demo0_EXTERNAL_OBJECTS =
 
 /home/roma/roma-small-rover/devel/lib/dynamixel/demo0: dynamixel/CMakeFiles/demo0.dir/src/demo0.cpp.o
 /home/roma/roma-small-rover/devel/lib/dynamixel/demo0: dynamixel/CMakeFiles/demo0.dir/build.make
-/home/roma/roma-small-rover/devel/lib/dynamixel/demo0: /home/roma/roma-small-rover/devel/lib/libdynamixel_sdk.so
+/home/roma/roma-small-rover/devel/lib/dynamixel/demo0: /opt/ros/noetic/lib/libdynamixel_sdk.so
 /home/roma/roma-small-rover/devel/lib/dynamixel/demo0: /opt/ros/noetic/lib/libroscpp.so
 /home/roma/roma-small-rover/devel/lib/dynamixel/demo0: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/roma/roma-small-rover/devel/lib/dynamixel/demo0: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0

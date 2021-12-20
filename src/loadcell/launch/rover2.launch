@@ -1,0 +1,26 @@
+<launch>
+    <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_n1" clear_params="true" output="screen">
+        <param name = "SN" type="int" value = "410183"/>
+        <param name = "kx" type="double" value = "1.023"/>
+        <param name = "ky" type="double" value = "0.946"/>
+        <param name = "kz" type="double" value = "1.000"/>
+    </node>
+    <!-- <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_n2" clear_params="true" output="screen">
+        <param name = "SN" type="int" value = "514762"/>
+        <param name = "kx" type="double" value = "0.883"/>
+        <param name = "ky" type="double" value = "0.853"/>
+        <param name = "kz" type="double" value = "1.005"/>
+    </node> -->
+    <!-- <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_n3" clear_params="true" output="screen">
+        <param name = "SN" type="int" value = "513957"/>
+        <param name = "kx" type="double" value = "0.881"/>
+        <param name = "ky" type="double" value = "0.986"/>
+        <param name = "kz" type="double" value = "0.946"/>
+    </node> -->
+    <!-- <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_n4" clear_params="true" output="screen">
+        <param name = "SN" type="int" value = "513125"/>
+        <param name = "kx" type="double" value = "0.999"/>
+        <param name = "ky" type="double" value = "0.864"/>
+        <param name = "kz" type="double" value = "0.823"/>
+    </node> -->
+</launch>

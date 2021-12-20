@@ -493,19 +493,6 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named dynamixel_sdk
-
-# Build rule for target.
-dynamixel_sdk: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk
-.PHONY : dynamixel_sdk
-
-# fast build rule for target.
-dynamixel_sdk/fast:
-	$(MAKE) -f servo_ros/CMakeFiles/dynamixel_sdk.dir/build.make servo_ros/CMakeFiles/dynamixel_sdk.dir/build
-.PHONY : dynamixel_sdk/fast
-
-#=============================================================================
 # Target rules for targets named reset
 
 # Build rule for target.
@@ -532,17 +519,30 @@ demo0/fast:
 .PHONY : demo0/fast
 
 #=============================================================================
-# Target rules for targets named read
+# Target rules for targets named loadcell_multi_node
 
 # Build rule for target.
-read: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 read
-.PHONY : read
+loadcell_multi_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 loadcell_multi_node
+.PHONY : loadcell_multi_node
 
 # fast build rule for target.
-read/fast:
-	$(MAKE) -f load-cell/CMakeFiles/read.dir/build.make load-cell/CMakeFiles/read.dir/build
-.PHONY : read/fast
+loadcell_multi_node/fast:
+	$(MAKE) -f loadcell/CMakeFiles/loadcell_multi_node.dir/build.make loadcell/CMakeFiles/loadcell_multi_node.dir/build
+.PHONY : loadcell_multi_node/fast
+
+#=============================================================================
+# Target rules for targets named loadcell_single_node
+
+# Build rule for target.
+loadcell_single_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 loadcell_single_node
+.PHONY : loadcell_single_node
+
+# fast build rule for target.
+loadcell_single_node/fast:
+	$(MAKE) -f loadcell/CMakeFiles/loadcell_single_node.dir/build.make loadcell/CMakeFiles/loadcell_single_node.dir/build
+.PHONY : loadcell_single_node/fast
 
 # Help Target
 help:
@@ -582,10 +582,10 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... dynamixel_sdk"
 	@echo "... reset"
 	@echo "... demo0"
-	@echo "... read"
+	@echo "... loadcell_multi_node"
+	@echo "... loadcell_single_node"
 .PHONY : help
 
 

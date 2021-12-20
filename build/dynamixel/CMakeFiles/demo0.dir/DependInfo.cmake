@@ -17,14 +17,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/roma/roma-small-rover/src/servo_ros/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/roma/roma-small-rover/build/servo_ros/CMakeFiles/dynamixel_sdk.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -3,13 +3,13 @@
 
 dynamixel/CMakeFiles/demo0.dir/src/demo0.cpp.o
  /home/roma/roma-small-rover/src/dynamixel/src/demo0.cpp
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/dynamixel_sdk.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/group_bulk_read.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/group_bulk_write.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/group_sync_read.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/group_sync_write.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/packet_handler.h
- /home/roma/roma-small-rover/src/servo_ros/include/dynamixel_sdk/port_handler.h
+ /opt/ros/noetic/include/dynamixel_sdk/dynamixel_sdk.h
+ /opt/ros/noetic/include/dynamixel_sdk/group_bulk_read.h
+ /opt/ros/noetic/include/dynamixel_sdk/group_bulk_write.h
+ /opt/ros/noetic/include/dynamixel_sdk/group_sync_read.h
+ /opt/ros/noetic/include/dynamixel_sdk/group_sync_write.h
+ /opt/ros/noetic/include/dynamixel_sdk/packet_handler.h
+ /opt/ros/noetic/include/dynamixel_sdk/port_handler.h
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h
  /opt/ros/noetic/include/ros/assert.h

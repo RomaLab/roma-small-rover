@@ -1,0 +1,36 @@
+<launch>
+    <arg name="posture" value="straight" />
+
+    <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_1" clear_params="true" output="screen">
+        <param name = "cellID" type="int" value = "1"/>
+        <param name = "SN" type="int" value = "410183"/>
+        <param name = "kx" type="double" value = "1.023"/>
+        <param name = "ky" type="double" value = "0.946"/>
+        <param name = "kz" type="double" value = "1.000"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/loadcell/data/$(arg posture)"/>
+    </node>
+    <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_2" clear_params="true" output="screen">
+        <param name = "cellID" type="int" value = "2"/>
+        <param name = "SN" type="int" value = "514762"/>
+        <param name = "kx" type="double" value = "0.883"/>
+        <param name = "ky" type="double" value = "0.853"/>
+        <param name = "kz" type="double" value = "1.005"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/loadcell/data/$(arg posture)"/>
+    </node>
+    <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_3" clear_params="true" output="screen">
+        <param name = "cellID" type="int" value = "3"/>
+        <param name = "SN" type="int" value = "513957"/>
+        <param name = "kx" type="double" value = "0.881"/>
+        <param name = "ky" type="double" value = "0.986"/>
+        <param name = "kz" type="double" value = "0.946"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/loadcell/data/$(arg posture)"/>
+    </node>
+    <node pkg="loadcell" type="loadcell_multi_node" name="loadcell_4" clear_params="true" output="screen">
+        <param name = "cellID" type="int" value = "4"/>
+        <param name = "SN" type="int" value = "513125"/>
+        <param name = "kx" type="double" value = "0.999"/>
+        <param name = "ky" type="double" value = "0.864"/>
+        <param name = "kz" type="double" value = "0.823"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/loadcell/data/$(arg posture)"/>
+    </node>
+</launch>

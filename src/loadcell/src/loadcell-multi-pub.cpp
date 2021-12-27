@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/String.h"
 #include "std_msgs/Int8.h"
 #include <map>
 #include <string>
@@ -19,7 +20,7 @@ std::map<int,int> mymap;
 std::map<int,int>::iterator it;
 
 int8_t controller;
-int32_t SN;
+int32_t cellID, SN;
 double kx, ky, kz;
 
 ros::Publisher oriDataPub;
@@ -27,6 +28,7 @@ ros::Publisher ForceDataPub;
 ros::Subscriber controllerSub;
 
 std_msgs::Float32MultiArray oriDataMsg,ForceDataMsg;
+std_msgs::String fileName;
 
 void signal_callback_handler(int signum)
 {
@@ -88,17 +90,19 @@ int main(int argc, char ** argv){
     signal(SIGINT, signal_callback_handler);
     controller = 0;
 
+    n.param("cellID",cellID,0);
     n.param("SN", SN, 513957);
     n.param("kx", kx, 1.0);
     n.param("ky", ky, 1.0);
     n.param("kz", kz, 1.0);
-    ROS_INFO("\nSN number:%d \nkx:%.3f\nky:%.3f\nkz:%.3f", SN,kx,ky,kz);
+    n.param<string>("fileName", fileName.data, "default");
+    ROS_INFO("\nID:%d\nSN number:%d \nkx:%.3f\nky:%.3f\nkz:%.3f\nfileName:%s", cellID,SN,kx,ky,kz,fileName.data.c_str());
     
     SensInit();
 	mapInit();
     oriDataPub = n.advertise<std_msgs::Float32MultiArray>("oriData",1);
     ForceDataPub = n.advertise<std_msgs::Float32MultiArray>("ForceData",1);
-    controllerSub = n.subscribe("controller",1,controllerCallback);
+    controllerSub = n.subscribe("/controller",1,controllerCallback);
 
     oriDataMsg.data.resize(3);
     ForceDataMsg.data.resize(3);
@@ -140,8 +144,8 @@ int main(int argc, char ** argv){
 	time_t t = time(0); 
 	ofstream outfile;
    	ofstream outfile2;
-	string filename = "/home/roma/roma-small-rover/src/loadcell/data/" + to_string(t) + "OriData.csv";
-   	string filename2 = "/home/roma/roma-small-rover/src/loadcell/data/" + to_string(t) + "ForceData.csv";
+	string filename = fileName.data + "_" +to_string(cellID) + "_" +to_string(SN) + "_Ori.csv";
+   	string filename2 = fileName.data + "_" +to_string(cellID)+ "_" +to_string(SN) + "_Force.csv";
 	outfile.open(filename,ios::app);
     outfile2.open(filename2,ios::app);
 	

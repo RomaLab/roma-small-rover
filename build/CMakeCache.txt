@@ -389,12 +389,6 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
 //Value Computed by CMake
-cvtest_BINARY_DIR:STATIC=/home/roma/roma-small-rover/build/cvtest
-
-//Value Computed by CMake
-cvtest_SOURCE_DIR:STATIC=/home/roma/roma-small-rover/src/cvtest
-
-//Value Computed by CMake
 dynamixel_BINARY_DIR:STATIC=/home/roma/roma-small-rover/build/dynamixel
 
 //Value Computed by CMake
@@ -484,6 +478,12 @@ rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+wheel-camera_BINARY_DIR:STATIC=/home/roma/roma-small-rover/build/wheel-camera
+
+//Value Computed by CMake
+wheel-camera_SOURCE_DIR:STATIC=/home/roma/roma-small-rover/src/wheel-camera
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake

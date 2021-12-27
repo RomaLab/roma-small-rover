@@ -1,14 +1,30 @@
-# introduction
+# Introduction
 
-读取传感器的数据，并转换为力数据发布出来
+loadcell包的主要功能：读取传感器的数据，并转换为力传感数据，发布为话题，并记录csv文件
 
-## 库文件安装
+# Source code
 
-/include/libphidget22-1.7.20210428/Readme
+src/loadcell-multi-pub.cppread.cpp 读取三维力传感器数据的脚本，需要参数输入
+src/loadcell-pub1.cpp 可能是单轴力传感器
 
-## build
+# How to use
 
-# samples
+在工作空间下，
 
-read.cpp 旧的loadcell，12个
-read2.cpp 新的三轴力传感器，1个
+> source devel/setup.bash
+>
+> roslaunch loadcell load-cell-4-input.launch
+
+
+# Notice
+
+如果使用的是对应的三维力传感器，相关的参数需要在launch文件中修改。
+
+```
+        <param name = "cellID" type="int" value = "1"/> <!--力传感器的ID，自定义即可-->
+        <param name = "SN" type="int" value = "410183"/> <!--电桥的SN码，这个需要与电桥完全对应-->
+        <param name = "kx" type="double" value = "1.023"/> <!--力传感器X轴灵敏度-->
+        <param name = "ky" type="double" value = "0.946"/> <!--力传感器Y轴灵敏度-->
+        <param name = "kz" type="double" value = "1.000"/> <!--力传感器Z轴灵敏度-->
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/loadcell/data/$(arg posture)"/> <!--传感器数据存储位置，arg是调整文件的前缀，与工况相关联-->
+```

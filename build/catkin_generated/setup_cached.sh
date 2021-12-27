@@ -10,4 +10,3 @@
 export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu'
 export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
 export PWD='/home/roma/roma-small-rover/build'
-export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'

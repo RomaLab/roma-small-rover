@@ -1,2 +1,2 @@
-cvtest:dynamixel:loadcell
+dynamixel:loadcell:wheel-camera
 -DCATKIN_DEVEL_PREFIX=/home/roma/roma-small-rover/devel -DCMAKE_INSTALL_PREFIX=/home/roma/roma-small-rover/install -G Unix Makefiles

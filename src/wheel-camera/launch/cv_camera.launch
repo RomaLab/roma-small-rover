@@ -1,0 +1,33 @@
+<launch>
+    <arg name="posture" value="straight" />
+    
+    <node pkg="wheel-camera" type="camera-single" name="camera_0" clear_params="true" output="screen">
+        <param name = "cameraID" type="int" value = "0"/>
+        <param name = "frameWidth" type="double" value = "320.0"/>
+        <param name = "frameHeight" type="double" value = "240.0"/>
+        <param name = "frameFPS" type="double" value = "30.0"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/wheel-camera/data/$(arg posture)"/>
+    </node>
+    <node pkg="wheel-camera" type="camera-single" name="camera_2" clear_params="true" output="screen">
+        <param name = "cameraID" type="int" value = "2"/>
+        <param name = "frameWidth" type="double" value = "320.0"/>
+        <param name = "frameHeight" type="double" value = "240.0"/>
+        <param name = "frameFPS" type="double" value = "30.0"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/wheel-camera/data/$(arg posture)"/>
+    </node>
+    <node pkg="wheel-camera" type="camera-single" name="camera_4" clear_params="true" output="screen">
+        <param name = "cameraID" type="int" value = "4"/>
+        <param name = "frameWidth" type="double" value = "320.0"/>
+        <param name = "frameHeight" type="double" value = "240.0"/>
+        <param name = "frameFPS" type="double" value = "30.0"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/wheel-camera/data/$(arg posture)"/>
+    </node>
+    <node pkg="wheel-camera" type="camera-single" name="camera_6" clear_params="true" output="screen">
+        <param name = "cameraID" type="int" value = "6"/>
+        <param name = "frameWidth" type="double" value = "320.0"/>
+        <param name = "frameHeight" type="double" value = "240.0"/>
+        <param name = "frameFPS" type="double" value = "30.0"/>
+        <param name = "fileName" type="str" value = "/home/roma/roma-small-rover/src/wheel-camera/data/$(arg posture)"/>
+    </node>
+
+</launch>

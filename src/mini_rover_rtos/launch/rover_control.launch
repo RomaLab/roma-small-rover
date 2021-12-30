@@ -1,0 +1,13 @@
+<launch>
+  <arg name="usb_port"                default="/dev/ttyUSB0"/>
+  <arg name="dxl_baud_rate"           default="4000000"/>
+  <arg name="namespace"               default="rover_control"/>
+
+  <param name="wheel_info"          value="$(find mini_rover_rtos)/config/wheel.yaml"/>
+  <param name="steer_info"          value="$(find mini_rover_rtos)/config/steer.yaml"/>
+  <param name="lift_info"           value="$(find mini_rover_rtos)/config/lift.yaml"/>
+
+  <node name="$(arg namespace)" pkg="mini_rover_rtos" type="rover_control_node"
+        required="true" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
+  </node>
+</launch>

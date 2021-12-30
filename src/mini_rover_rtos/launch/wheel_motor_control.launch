@@ -1,0 +1,13 @@
+<launch>
+  <arg name="usb_port"                default="/dev/ttyUSB0"/>
+  <arg name="dxl_baud_rate"           default="4000000"/>
+  <arg name="namespace"               default="wheel_controller"/>
+
+  <arg name="use_cmd_vel"             default="false"/>
+
+  <param name="dynamixel_info"          value="$(find mini_rover_rtos)/config/wheel.yaml"/>
+
+  <node name="$(arg namespace)" pkg="mini_rover_rtos" type="wheel_motor_node"
+        required="true" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
+  </node>
+</launch>

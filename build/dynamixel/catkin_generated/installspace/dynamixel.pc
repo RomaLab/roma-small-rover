@@ -1,8 +1,0 @@
-prefix=/home/roma/roma-small-rover/install
-
-Name: dynamixel
-Description: Description of dynamixel
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

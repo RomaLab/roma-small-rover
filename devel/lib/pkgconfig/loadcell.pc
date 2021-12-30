@@ -1,8 +1,0 @@
-prefix=/home/roma/roma-small-rover/devel
-
-Name: loadcell
-Description: Description of loadcell
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

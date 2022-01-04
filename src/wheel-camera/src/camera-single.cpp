@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     time_t t = time(0); 
 
     // string filename = "/home/roma/roma-small-rover/src/wheel-camera/data/"+ fileName.data + "_"+to_string(cameraID)+".avi";     
-    string filename = fileName.data + "_" +to_string(cameraID)+".avi";
+    string filename = fileName.data + "_F" +to_string(cameraID*2+1)+".avi";
     
     writer.open(filename, codec, fps, frame.size(), isColor);
 

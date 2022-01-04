@@ -1,0 +1,12 @@
+<launch>
+    <arg name="ns" default="GT1" />
+    <!-- <arg name="ns" default="GT2" /> -->
+    <!-- <arg name="ns" default="GT3" /> -->
+    
+    <include file="$(find wheel-camera)/launch/cv_camera.launch">
+        <arg name="posture" value="$(arg ns)"/>
+    </include>
+    <include file="$(find loadcell)/launch/load-cell-4-input.launch">
+        <arg name="posture" value="$(arg ns)"/>
+    </include>
+</launch>

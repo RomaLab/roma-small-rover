@@ -144,8 +144,8 @@ int main(int argc, char ** argv){
 	time_t t = time(0); 
 	ofstream outfile;
    	ofstream outfile2;
-	string filename = fileName.data + "_" +to_string(cellID) + "_" +to_string(SN) + "_Ori.csv";
-   	string filename2 = fileName.data + "_" +to_string(cellID)+ "_" +to_string(SN) + "_Force.csv";
+	string filename = fileName.data + "_P" +to_string(cellID) + "_" +to_string(SN) + "_Ori.csv";
+   	string filename2 = fileName.data + "_P" +to_string(cellID)+ "_" +to_string(SN) + "_Force.csv";
 	outfile.open(filename,ios::app);
     outfile2.open(filename2,ios::app);
 	

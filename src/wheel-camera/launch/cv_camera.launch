@@ -1,5 +1,5 @@
 <launch>
-    <arg name="posture" value="straight" />
+    <arg name="posture" default="straight" />
     
     <node pkg="wheel-camera" type="camera-single" name="camera_0" clear_params="true" output="screen">
         <param name = "cameraID" type="int" value = "0"/>

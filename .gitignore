@@ -1,2 +1,4 @@
 build/
 devel/
+src/loadcell/data/
+src/wheel-camera/data/

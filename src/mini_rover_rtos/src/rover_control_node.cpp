@@ -100,6 +100,11 @@ int start(int argc, char **argv)
             msg.data=1;
             switch_pub.publish(msg);
             send_event(ExecExperiment2());
+            usleep(500000);
+            send_event(BackToCenter());
+            usleep(500000);
+            send_event(ExecExperiment2());
+            usleep(500000);
             msg.data=0;
             switch_pub.publish(msg);
             ROS_INFO("Back to Center? Enter Y/N");

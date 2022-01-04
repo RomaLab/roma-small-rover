@@ -18,7 +18,7 @@ lift2:
   Homing_Offset: -1024
   Min_Position_Limit: 1500
   Max_Position_Limit: 4000
-  Goal_Position: 1700
+  Goal_Position: 1600
 lift3:
   ID: 33
   Operating_Mode: 4
@@ -36,5 +36,5 @@ lift4:
   Homing_Offset: 1024
   Min_Position_Limit: 1500
   Max_Position_Limit: 4000
-  Goal_Position: 1700
+  Goal_Position: 1600
 

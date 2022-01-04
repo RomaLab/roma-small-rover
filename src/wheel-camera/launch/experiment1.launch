@@ -1,0 +1,10 @@
+<launch>
+    <arg name="ns" default="experiment1" />
+    
+    <include file="$(find wheel-camera)/launch/cv_camera.launch">
+        <arg name="posture" value="$(arg ns)"/>
+    </include>
+    <include file="$(find loadcell)/launch/load-cell-4-input.launch">
+        <arg name="posture" value="$(arg ns)"/>
+    </include>
+</launch>

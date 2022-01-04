@@ -102,7 +102,7 @@ int main(int argc, char ** argv){
 	mapInit();
     oriDataPub = n.advertise<std_msgs::Float32MultiArray>("oriData",1);
     ForceDataPub = n.advertise<std_msgs::Float32MultiArray>("ForceData",1);
-    controllerSub = n.subscribe("/controller",1,controllerCallback);
+    controllerSub = n.subscribe("/switch",1,controllerCallback);
 
     oriDataMsg.data.resize(3);
     ForceDataMsg.data.resize(3);

@@ -14,7 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
     dynamixel_workbench_msgs
     dynamixel_workbench_toolbox
     cmake_modules
-    message_generation
 )
 
 find_package(PkgConfig REQUIRED)
@@ -34,15 +33,7 @@ add_definitions(-DHAVE_NEW_YAMLCPP)
 endif(NOT ${YAML_CPP_VERSION} VERSION_LESS "0.5")
 
 
-add_message_files(
-    FILES
-    ControlCMD.msg
-)
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs  # Or other packages containing msgs
-)
 
 catkin_package(
  INCLUDE_DIRS include

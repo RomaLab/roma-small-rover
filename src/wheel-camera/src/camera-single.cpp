@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     n.param<string>("fileName", fileName.data, "default");
     ROS_INFO("\ncameraID:%d \nframeWidth:%.1f\nframeHeight:%.1f\nframeFPS:%.1f\nfileName:%s", cameraID,frameWidth,frameHeight,frameFPS,fileName.data.c_str());
 
-    controllerSub = n.subscribe("/switch",1,controllerCallback);
+    controllerSub = n.subscribe("/switch",10,controllerCallback);
     // controllerSub = n.subscribe("/controller",1,controllerCallback);
  
     VideoCapture camera(cameraID);
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     time_t t = time(0); 
 
     // string filename = "/home/roma/roma-small-rover/src/wheel-camera/data/"+ fileName.data + "_"+to_string(cameraID)+".avi";     
-    string filename = fileName.data + "_F" +to_string(cameraID*2+1)+".avi";
+    string filename = fileName.data + "_F" +to_string(cameraID/2+1)+".avi";
     
     writer.open(filename, codec, fps, frame.size(), isColor);
 

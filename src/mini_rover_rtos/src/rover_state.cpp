@@ -95,7 +95,7 @@ class Experiment1 // 直线前进
         sws.goalSpeed[2]=100;
         sws.goalSpeed[3]=100;
         send_event(sws);
-        sleep(3);
+        sleep(2);
         send_event(Brake());
         ROS_INFO("Rover Stop Move");
     };
@@ -106,7 +106,7 @@ class Experiment1 // 直线前进
         sws.goalSpeed[2]=-100;
         sws.goalSpeed[3]=-100;
         send_event(sws);
-        sleep(3);
+        sleep(2);
         send_event(Brake());
         transit<RoverStop>();
     }
@@ -157,7 +157,7 @@ class Experiment3 // 车轮转向
         sws.goalSpeed[2]=100;
         sws.goalSpeed[3]=100;
         send_event(sws);
-        sleep(3);
+        sleep(2);
         send_event(Brake());
     };
     void react(BackToCenter const&){
@@ -167,12 +167,11 @@ class Experiment3 // 车轮转向
         sws.goalSpeed[2]=-100;
         sws.goalSpeed[3]=-100;
         send_event(sws);
-        sleep(3);
+        sleep(2);
         send_event(Brake());
         transit<RoverStop>();
     }
 };
-
 // ----------------------------------------------------------------------------
 // Base State: default implementations
 

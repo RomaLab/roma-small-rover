@@ -1,7 +1,7 @@
 <launch>
-    <!-- <arg name="ns" default="SR1" /> -->
-    <!-- <arg name="ns" default="SR2" /> -->
-    <arg name="ns" default="SR3" />
+    <!-- <arg name="ns" default="Force-Carlibrate" /> -->
+    <arg name="ns" default="ST2" />
+    <!-- <arg name="ns" default="ST3" /> -->
     
     <include file="$(find wheel-camera)/launch/cv_camera.launch">
         <arg name="posture" value="$(arg ns)"/>

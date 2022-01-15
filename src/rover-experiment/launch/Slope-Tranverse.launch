@@ -1,7 +1,7 @@
 <launch>
-    <arg name="ns" default="ST1" />
+    <!-- <arg name="ns" default="ST1" /> -->
     <!-- <arg name="ns" default="ST2" /> -->
-    <!-- <arg name="ns" default="ST3" /> -->
+    <arg name="ns" default="ST3" />
     
     <include file="$(find wheel-camera)/launch/cv_camera.launch">
         <arg name="posture" value="$(arg ns)"/>

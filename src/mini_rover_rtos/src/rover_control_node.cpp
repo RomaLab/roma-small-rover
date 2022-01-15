@@ -80,7 +80,9 @@ int start(int argc, char **argv)
         case '1':
             msg.data=1;
             switch_pub.publish(msg);
+            sleep(1);
             send_event(ExecExperiment1());
+            sleep(1);
             msg.data=0;
             switch_pub.publish(msg);
             ROS_INFO("Back to Center? Enter Y/N");
@@ -99,12 +101,9 @@ int start(int argc, char **argv)
         case '2':
             msg.data=1;
             switch_pub.publish(msg);
+            sleep(1);
             send_event(ExecExperiment2());
-            usleep(500000);
-            send_event(BackToCenter());
-            usleep(500000);
-            send_event(ExecExperiment2());
-            usleep(500000);
+            sleep(1);
             msg.data=0;
             switch_pub.publish(msg);
             ROS_INFO("Back to Center? Enter Y/N");
@@ -123,7 +122,9 @@ int start(int argc, char **argv)
         case '3':
             msg.data=1;
             switch_pub.publish(msg);
+            sleep(1);
             send_event(ExecExperiment3());
+            sleep(1);
             msg.data=0;
             switch_pub.publish(msg);
             ROS_INFO("Back to Center? Enter Y/N");

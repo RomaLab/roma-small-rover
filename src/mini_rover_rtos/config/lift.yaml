@@ -9,7 +9,7 @@ lift1:
   Homing_Offset: -1024
   Min_Position_Limit: 1300
   Max_Position_Limit: 3800
-  Goal_Position: 3500
+  Goal_Position: 3000
 lift2:
   ID: 32
   Operating_Mode: 4
@@ -18,7 +18,7 @@ lift2:
   Homing_Offset: -1024
   Min_Position_Limit: 1500
   Max_Position_Limit: 4000
-  Goal_Position: 1600
+  Goal_Position: 1309
 lift3:
   ID: 33
   Operating_Mode: 4
@@ -27,7 +27,7 @@ lift3:
   Homing_Offset: 1024
   Min_Position_Limit: 1400
   Max_Position_Limit: 3900
-  Goal_Position: 3650
+  Goal_Position: 3349
 lift4:
   ID: 34
   Operating_Mode: 4
@@ -36,5 +36,5 @@ lift4:
   Homing_Offset: 1024
   Min_Position_Limit: 1500
   Max_Position_Limit: 4000
-  Goal_Position: 1600
+  Goal_Position: 1596
 
